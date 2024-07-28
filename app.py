@@ -141,8 +141,7 @@ valid_model_names = [
     'mixtral-8x7b-32768'
 ]
 
-st.markdown("<a href='https://groq.com'><img src='app/static/banner.png' width='500'></a>", unsafe_allow_html=True)
-st.write("---")
+
 
 
 
@@ -224,18 +223,10 @@ with st.sidebar:
             except Exception as e:
                 st.error(f"Error updating configuration: {str(e)}")
 
-    st.markdown("---")
-    st.markdown("""
-    ### Credits
-    - MOA: [Together AI](https://www.together.ai/blog/together-moa)
-    - LLMs: [Groq](https://groq.com/)
-    - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
-    """)
+
 
 # Main app layout
-st.header("Mixture of Agents", anchor=False)
-st.write("A demo of the Mixture of Agents architecture proposed by Together AI, Powered by Groq LLMs.")
-st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", width=1000)
+
 
 # Display current configuration
 with st.expander("Current MOA Configuration", expanded=False):
